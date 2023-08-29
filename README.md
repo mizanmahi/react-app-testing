@@ -7,7 +7,7 @@ Simple React-Ts app with tests.
 Clone the repository:
 
 ```sh
-git clone https://github.com/your-username/your-project.git
+git clone https://github.com/mizanmahi/react-app-testing.git
 ```
 
 Navigate to the project directory:
