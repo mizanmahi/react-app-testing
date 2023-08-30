@@ -11,7 +11,6 @@ const Users = () => {
    const [name, setName] = useState<string>('');
    const [email, setEmail] = useState<string>('');
    const [editMode, setEditMode] = useState(false);
-   
 
    const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       setName(event.target.value);
@@ -29,15 +28,13 @@ const Users = () => {
       setEmail('');
    };
 
-  
-
    return (
       <div className='formWrapper'>
          <h1>Testing Rect</h1>
          <h2>Testing react in h2</h2>
          <p>Enter the form data</p>
 
-         <div data-testId='paragraph'>
+         <div data-testid='paragraph'>
             <p>
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
                libero omnis tenetur magnam dolores porro debitis aperiam? Vero
@@ -82,7 +79,6 @@ const Users = () => {
             ) : (
                <button type='submit'>Edit</button>
             )}
-            
          </form>
          {users.length > 0 && (
             <div>
@@ -96,8 +92,6 @@ const Users = () => {
                </ul>
             </div>
          )}
-
-       
       </div>
    );
 };
