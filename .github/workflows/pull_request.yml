@@ -1,7 +1,7 @@
 name: Logging pull event
 on:
    pull_request:
-      types:
+      types: # this is called activity type
          - opened # we can add more activity like thid below
 jobs:
    log-pull-info:

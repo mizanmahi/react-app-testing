@@ -1,7 +1,15 @@
 name: Deploy app
 on:
    push:
-      branches: ['main']
+      branches: # event filtering
+         - main
+         - 'dev-*' # dev-new dev-mizan any branch name start with dev-
+         #  - 'feat/**' # feat/new/me feat/new/metoo  its support / after feat/
+      paths-ignore:
+         - '.github/workflows/*'
+   pull_request:
+      types:
+         - opened
 jobs:
    test:
       runs-on: ubuntu-latest
