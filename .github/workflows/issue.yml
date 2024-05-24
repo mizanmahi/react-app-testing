@@ -1,8 +1,8 @@
 name: Logging event details
 on: [issues, workflow_dispatch]
 jobs:
-   logIssu:
+   logIssue:
       runs-on: ubuntu-latest
       steps:
          - name: Logging event details
-           run: echo "${{toJson(github.event_name) }}"
+           run: echo "${{github.event}}"
