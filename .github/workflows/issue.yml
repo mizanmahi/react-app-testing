@@ -1,5 +1,5 @@
 name: Logging event details
-on: issues
+on: [issues, workflow_dispatch]
 jobs:
    logIssu:
       runs-on: ubuntu-latest
