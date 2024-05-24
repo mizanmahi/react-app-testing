@@ -10,6 +10,9 @@ on:
    pull_request:
       types:
          - opened
+      branches: # event filtering
+         - main
+         - 'dev-*'
 jobs:
    test:
       runs-on: ubuntu-latest

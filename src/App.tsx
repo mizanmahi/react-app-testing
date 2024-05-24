@@ -13,6 +13,9 @@ import Users from './components/Users/User';
 function App() {
    return (
       <div>
+         <h1 className='text-center text-blue-500 text-2xl my-5'>
+            Testing React App
+         </h1>
          {/* <PrimaryButton /> */}
          {/* <PrimaryButton actionType='Delete' /> */}
          <Users />
