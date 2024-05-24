@@ -11,7 +11,6 @@ const Users = () => {
    const [name, setName] = useState<string>('');
    const [email, setEmail] = useState<string>('');
    const [editMode, setEditMode] = useState(false);
-   
 
    const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       setName(event.target.value);
@@ -27,9 +26,8 @@ const Users = () => {
       setUsers([...users, newUser]);
       setName('');
       setEmail('');
+      setEditMode(true);
    };
-
-  
 
    return (
       <div className='formWrapper'>
@@ -82,7 +80,6 @@ const Users = () => {
             ) : (
                <button type='submit'>Edit</button>
             )}
-            
          </form>
          {users.length > 0 && (
             <div>
@@ -96,8 +93,6 @@ const Users = () => {
                </ul>
             </div>
          )}
-
-       
       </div>
    );
 };
