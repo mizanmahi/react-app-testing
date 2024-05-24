@@ -1,0 +1,11 @@
+name: Logging pull event
+on:
+   pull_request:
+      types:
+         - opened # we can add more activity like thid below
+jobs:
+   log-pull-info:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Log event details
+           run: echo "${{toJson(github.event)}}"
