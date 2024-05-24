@@ -1,0 +1,31 @@
+name: Deploy app
+on: push
+jobs:
+   test:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Get the codes
+           uses: actions/checkout@v3
+         - name: Install node on runner machine
+           uses: actions/setup-node@v4
+           with:
+              node-version: '18.18'
+         - name: Install dependency
+           run: yarn install --frozen-lockfile
+         - name: Run tests
+           run: npm test
+   deploy:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Get the codes
+           uses: actions/checkout@v3
+         - name: Install node on runner machine
+           uses: actions/setup-node@v4
+           with:
+              node-version: '18.18'
+         - name: Install dependency
+           run: yarn install --frozen-lockfile
+         - name: Build the app
+           run: yarn build
+         - name: Deploy
+           run: echo "Deploying the app..."
